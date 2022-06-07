@@ -25,4 +25,18 @@ class RestaurantController extends Controller
         ], 200);
         
     }
+
+    public function addRestaurant(Request $request){
+        $restaurant = new Restaurant;
+        $restaurant->name = $request->name;
+        $restaurant->description = $request->description;
+        $restaurant->status = "active";
+        $restaurant->image = $request->image;
+        $restaurant->city_id = $request->city_id;
+        $restaurant->save();
+
+        return response()->json([
+            "status" => "Success"
+        ], 200);
+    }
 }
