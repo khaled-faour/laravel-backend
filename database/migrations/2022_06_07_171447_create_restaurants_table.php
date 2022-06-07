@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string("name");
             $table->string("description");
-            $table->string("staus");
+            $table->string("status");
             $table->text("image");
             $table->integer("city_id");
         });
