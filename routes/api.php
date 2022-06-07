@@ -20,3 +20,4 @@ use App\Http\Controllers\RestaurantController;
 // });
 
 Route::get('/restaurants', [RestaurantController::class, 'getAllRestaurants'])->name("all-restaurants");
+Route::get('/restaurant/{id}', [RestaurantController::class, 'getRestaurant'])->name("single-restaurant");

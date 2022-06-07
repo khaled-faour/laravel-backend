@@ -13,7 +13,16 @@ class RestaurantController extends Controller
         $restaurants = Restaurant::all();
         return response()->json([
             "status" => "Success",
-            "restos" => $restaurants
+            "restaurnts" => $restaurants
         ], 200);
+    }
+
+    public function getRestaurant($id = null){
+        $restaurant = Restaurant::find($id);
+        return response()->json([
+            "status" => "Success",
+            "restaurant" => $restaurant
+        ], 200);
+        
     }
 }
